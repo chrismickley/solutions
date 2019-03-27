@@ -1,0 +1,235 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+/* .grid-container * {  */
+/*  border: 1px solid red; */
+/*  position: relative; */
+/* } */
+
+/* .grid-container *:after {  */
+/*  content:attr(class); */
+/*  position: absolute; */
+/*  top: 0; */
+/*  left: 0; */
+/* } */
+
+.grid-container {
+  display: grid;
+  height: 550px;
+  grid-template-columns: 0.1fr 0.9fr 0.3fr 1.8fr 0.1fr;
+  grid-template-rows: .5fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  	". ParkName ParkName ParkName ." 
+  	". ParkDescription ParkDescription ParkDescription ." 
+  	". VisitorInfo . ParkDetail ."
+  	". weather weather weather ."
+}
+
+.ParkDescription { 
+	grid-area: ParkDescription; 
+	padding-bottom: 20px;
+}
+
+.ParkName {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "Name Name Name" "StateFounded . ." "StateFounded . .";
+  grid-area: ParkName;
+}
+
+.Name { grid-area: Name; }
+
+.StateFounded {
+  display: grid;
+  grid-row-gap: .2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: .5fr;
+  grid-template-areas: "state founded";
+  grid-area: StateFounded;
+}
+
+.state { grid-area: state; }
+
+.founded { grid-area: founded; }
+
+.VisitorInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "campSitesTitle CampSitesCount" "VisitorTitle VisitorCount" "FeeTitle EntryFee";
+  grid-area: VisitorInfo;
+  padding-bottom: 20px;
+}
+
+.campSitesTitle { grid-area: campSitesTitle; }
+
+.VisitorTitle { grid-area: VisitorTitle; }
+
+.FeeTitle { grid-area: FeeTitle; }
+
+.CampSitesCount { grid-area: CampSitesCount; }
+
+.VisitorCount { grid-area: VisitorCount; }
+
+.EntryFee { grid-area: EntryFee; }
+
+
+.ParkDetail {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "ClimateTitle Climate AcerageTitle Acerage" "milesTrailsTitle milesOfTrails elevationTitle elevation" "animalsTitle animalsCount . .";
+  grid-area: ParkDetail;
+  padding-bottom: 20px;
+}
+
+.ClimateTitle { grid-area: ClimateTitle; }
+
+.Climate { grid-area: Climate; }
+
+.AcerageTitle { grid-area: AcerageTitle; }
+
+.Acerage { grid-area: Acerage; }
+
+.milesTrailsTitle { grid-area: milesTrailsTitle; }
+
+.milesOfTrails { grid-area: milesOfTrails; }
+
+.elevationTitle { grid-area: elevationTitle; }
+
+.elevation { grid-area: elevation; }
+
+.animalsTitle { grid-area: animalsTitle; }
+
+.animalsCount { grid-area: animalsCount; }
+
+
+.parkWeather { grid-area: weather; }
+
+.title {
+	font-weight: bold;
+}
+
+.gridParkName {
+	font-weight: bold;
+	font-size: 200%;
+}
+
+.textRight {
+	text-align: right;
+}
+
+.textState {
+	font-size: 125%;
+}
+
+.parkWeatherMain {
+	display: flex;
+}
+
+.weatherDisplay {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.weatherDisplay h4, .weatherDisplay div {
+	dislay: inline-block;
+	text-align:center;
+	width: 75%;
+}
+
+.weatherDisplay h3 {
+	text-align: left;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.weatherDisplay div > span {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.weatherDisplay div > span.div {
+	width: 40%;
+}
+
+div.tempContainer {
+	height: 40px;
+}
+
+div.tempTitle {
+	font-weight: bold;
+}
+
+div.tempHigh {
+	float: left;
+	width: 40%;
+}
+div.tempLow {
+	float: right;
+	width: 40%;
+}
+
+.weatherToday {
+	width: 20%;
+}
+
+.weatherToday img {
+	width: 80%;
+}
+
+.weatherDay {
+	width: 18%;
+}
+
+.weatherDay img {
+	width: 50%;
+}
+
+div.scaleSwitch {
+	text-align: right;
+	margin-right:20px;
+}
+
+div.scaleSwitch a {
+	text-decoration: none;
+}
+
+div.scaleSwitch a:hover {
+	text-decoration: underline;
+	text-shadow: 1px 1px darkgrey;
+    border-left: 1px solid darkgrey;
+    border-right: 1px solid darkgrey;
+}
+
+div.scaleSwitch a > span {
+	color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-left: 1px solid;
+	border-right: 1px solid;
+}
+
+div.warnings {
+	width: 100%;
+	margin-top: 10px;
+	text-align: left;
+}
+
+ul {
+	list-style-position: inside;
+	line-height: 23px;
+	padding-left: 0px;
+	list-style: none;
+}
+div.warnings ul > li {
+	font-size: .7em;
+}
+
+.lowWarningClass {
+	color: blue !important;
+}
+
+.highWarningClass {
+	color: red !important;
+}

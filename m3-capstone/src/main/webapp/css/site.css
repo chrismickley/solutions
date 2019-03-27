@@ -1,0 +1,108 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+	margin-bottom: 2%;
+}
+header img {
+	width:60%;
+}
+
+header div {
+	height: 35px;
+	padding-top: 10px;
+	border-top: solid 1px;
+	border-bottom: solid 1px;
+	padding-left: 10px;
+	font-size: 1.35em;
+	
+}
+
+header a {
+	font-family: 'Roboto Slab', serif;
+	font-size: 95%;
+	text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+	padding-right: 5px;
+	padding-left: 5px;
+	color: black;
+}
+
+header a:hover {
+    text-decoration: underline;
+    text-shadow: 1px 1px darkgrey;
+    border-left: 1px solid darkgrey;
+    border-right: 1px solid darkgrey;
+}
+
+footer {
+	margin-top: 20px;
+	height:10%;
+}
+
+.parkInfo {
+	display: flex;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.parkImage {
+	width: 40%;
+}
+.parkImage img {
+	width: 100%;
+}
+
+.parkShortDetails {
+	width: 60%;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+.parkShortDetails h1, h4{
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.parkShortDetails h1 > a {
+	text-decoration:none;
+	color: DarkBlue;
+}
+
+.parkShortDetails h1 > a:hover {
+    text-decoration: underline;
+}
+
+.parkDetailImage {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	color: red;  
+	background-size: 100% 100%; 
+	background-repeat: no-repeat; 
+	height: 500px;
+	padding-bottom:10px;
+}
+
+.quote {
+    color: LemonChiffon;
+	font-family: 'Courgette', cursive;
+    font-weight: bold;
+    font-size: 150%;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-shadow: 2px 2px black;
+}
+
+.quoteSource {
+	font-family: 'Lora', 'serif';
+    font-style: italic;
+    font-size: 85%;
+    color: white !important;
+    text-align: right;
+    padding-right: 20px;
+}
+
